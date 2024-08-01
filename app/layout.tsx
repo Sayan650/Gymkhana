@@ -15,8 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="bg-white">
+      <body className={`${inter.className} bg-gray-50 font-inter tracking-tight text-gray-900 antialiased`}>
+        <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+        {children}
+        </div>
+      </body>
     </html>
   );
 }
